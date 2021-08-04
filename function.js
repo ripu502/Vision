@@ -64,7 +64,7 @@ function onSubmit(e) {
     var formData = new FormData();
     formData.append("image", document.querySelector('#file-input').files[0]);
     // console.log(document.querySelector('#image').files[0]);
-    fetch('http://max-image-caption-generator.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
+    fetch('https://max-image-caption-generator.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
         method: 'POST',
         // headers: { 'Content-Type': 'multipart/form-data' },
         body: formData
@@ -94,7 +94,7 @@ function onSubmit(e) {
                     }
                 ]
             };
-            fetch('http://max-question-answering.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
+            fetch('https://max-question-answering.codait-prod-41208c73af8fca213512856c7a09db52-0000.us-east.containers.appdomain.cloud/model/predict', {
             method: 'POST',
             body : {
                 'paragraphs': [
